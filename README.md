@@ -1,37 +1,60 @@
 NetApp ONTAP Metrics Exporter
+
 This Flask application serves as a metrics exporter for NetApp ONTAP storage systems. It connects to the NetApp API to retrieve metrics related to storage aggregates and volumes, formatting the data for Prometheus monitoring.
-Features
-Secure Connection: Connects to the NetApp ONTAP using environment variables for IP address, username, and password.
+
+Features:
+
 Metrics Retrieval: Gathers information on storage aggregates and volumes, including:
-Total capacity
-Used capacity
-Free capacity
-IOPS (Input/Output Operations Per Second)
-Latency
-Throughput
-Prometheus Compatibility: Outputs metrics in a format compatible with Prometheus, allowing easy integration with monitoring systems.
+
+  Total capacity
+  
+  Used capacity
+  
+  Free capacity
+  
+  IOPS (Input/Output Operations Per Second)
+  
+  Latency
+  
+  Throughput
+  
+  Prometheus Compatibility: Outputs metrics in a format compatible with Prometheus, allowing easy integration with monitoring systems.
+  
+
 Installation
+
 Clone the Repository:
-bash
-git clone https://github.com/yourusername/repository-name.git
-cd repository-name
+
+  git clone https://github.com/yourusername/repository-name.git
+  
+  cd repository-name
 
 Install Dependencies:
+
+
 Make sure you have Python 3.x installed. Then, install the required packages:
-bash
-pip install Flask netapp_ontap Flask-Bcrypt
+
+  pip install Flask netapp_ontap Flask-Bcrypt
+  
 
 Set Environment Variables:
+
+
 Set the following environment variables with your NetApp ONTAP credentials:
-bash
-export NETAPP_IP='your_netapp_ip'
-export NETAPP_USERNAME='your_username'
-export NETAPP_PASSWORD='your_password'
+
+  export NETAPP_IP='your_netapp_ip'
+  
+  export NETAPP_USERNAME='your_username'
+  
+  export NETAPP_PASSWORD='your_password'
+  
 
 Usage
+
 Run the application using:
-bash
-python app.py
+
+  python app.py
+  
 
 The application will start and listen on port 5000. You can access the metrics at:
 text
